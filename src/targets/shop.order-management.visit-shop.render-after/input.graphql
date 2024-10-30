@@ -1,0 +1,18 @@
+query OrderManagementVisitShopRenderAfter {
+  order {
+    id
+    email
+    returns: metafield(
+      namespace: "app--3426665--returns"
+      key: "redo-returns"
+    ) {
+      value
+    }
+  }
+  shop {
+    id
+    myshopifyDomain {
+      host
+    }
+  }
+}
